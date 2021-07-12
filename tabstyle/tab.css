@@ -1,0 +1,61 @@
+*,
+*:after,
+*:before{
+    box-sizing: border-box;
+}
+
+body{
+    font-weight: 300;
+    background-color: #FBF6F0;
+}
+
+.tabs{
+    --tab-width: 200;
+    --tab-length: 3;
+    width: calc(var(--tab-width) * var(--tab-length) * 1px);
+    margin: 0 auto;
+    box-shadow: 0 7px 8px -4px rgba(0,0,0,0.2), 
+    0 13px 19px 2px rgba(0,0,0,0.14),
+    0 5px 24px 4px rgba(0,0,0,0.12);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabs>nav{
+    display: flex;
+    position: relative;
+    background-color: #FFA45B;
+}
+
+.tab{
+    width: calc(var(--tab-width) * 1px);
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+    z-index: 10;
+}
+
+.glider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: calc(var(--tab-width) * 1px);
+    background-color: #fff;
+    transition: 0.25s ease-out;
+}
+/*tab-content가 해당 tab이 클릭 되었을 때만 표기가 되어야 하기 때문에
+display:none을 기본설정으로 한다 */
+.tab-content{
+    min-height: 300px;
+    line-height: 2.5;
+    background-color: #fff;
+    padding: 20px;
+    display: none;
+}
+/*tab이 클릭되었을 때 해당 tab-content의 classList에 acitve class를 추가한다*/
+.tab-content.active{
+    display: block;
+}
