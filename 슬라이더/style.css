@@ -13,3 +13,42 @@
 .boxoffice button:hover{
   border: 1px solid black;
 }
+.left_btn{
+  position: absolute;
+  left:0;
+  top: 150px;
+}
+.right_btn{
+  position: absolute;
+  right: 0;
+  top: 150px;
+}
+
+
+.boxoffice_list {
+  display: flex;
+  margin-inline-start: 50px;
+  margin-inline-end: 50px;
+  flex-direction: row;
+  overflow: hidden;
+  opacity: 0;
+  
+}
+.poster{
+  width: 155px;
+  height: 300px;
+  border: 3px solid black;
+  display: flex;
+  --curentIndex :0;
+  --duration: 0;
+  transition: transform calc(var(--duration) * 1ms) ease-out;
+  transform: translate3D(calc(var(--currentIndex) * -100%), 0,0);
+}
+
+.poster img{
+  width: auto;
+  height: auto;
+  max-width: 150px;
+  max-height: 300px;
+  flex:auto;
+}
