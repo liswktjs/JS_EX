@@ -44,48 +44,27 @@ const movie_list = [
 const boxoffice_list = document.querySelector('.boxoffice_list');
 const left_btn = document.querySelector('.left_btn');
 const right_btn = document.querySelector('.right_btn');
-const poster = document.querySelector('poster');
 
-let currentIndex = 0;
-let isMoving = false;
-const DURATION = 500; 
+
+let currentIndex = 0; 
 
 function printPoster(){
-    const poster_list0 = [movie_list[9], ...movie_list, movie_list[0]];
-    const poster_list1 = [movie_list[0], movie_list.slice(1),movie_list.slice(0,2)];
-    const poster_list2 = [movie_list[1], movie_list.slice(2),movie_list.slice(0,3)];
-    const poster_list3 = [movie_list[2], movie_list.slice(3),movie_list.slice(0,4)];
-    const poster_list4 = [movie_list[3], movie_list.slice(4),movie_list.slice(0,5)];
-   
-    document.querySelector('.poster0').innerHTML = `
-    ${poster_list0.map(movie => `<img src='${movie.poster}' alt='${movie.title}'>`).join('')}
-    `;
-   
-    document.querySelector('.poster1').innerHTML = `
-    ${poster_list1.map(movie => `<img src='${movie.poster}>' alt='${movie.title}'`).join('')}
-    `;
-
-    document.querySelector('.poster2').innerHTML = `
-    ${poster_list2.map(movie => `<img src='${movie.poster}' alt='${movie.title}'>`).join('')}
-    `;
-
-    document.querySelector('.poster3').innerHTML = `
-    ${poster_list3.map(movie => `<img src='${movie.poster}' alt='${movie.title}'>`).join('')}
-    `;
-
-    document.querySelector('.poster4').innerHTML = `
-    ${poster_list4.map(movie=> `<img src='${movie.poster}' alt='${movie.title}'`).join('')}
-    `;
-
+    for(let i =0; i<5; i++){
+        let p = '.p' + String(i);
+        let op = 0;
+        movie_list.forEach(e => {
+            let img =document.createElement('img');
+            
+            img.setAttribute('src',e.poster);
+            img.setAttribute('alt',e.title);
+            img.setAttribute('z-index',op);
+            op += 1;
+            document.querySelector(p).appendChild(img);
+        })
+    }
     
-    move(++currentIndex); 
-
 }
 
-function move(currentIndex, duration = 0){
-    
-
-}
 
 function clickLeft(){
     

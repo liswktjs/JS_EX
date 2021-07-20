@@ -17,38 +17,51 @@
   position: absolute;
   left:0;
   top: 150px;
+  margin-left: 20px;
 }
 .right_btn{
   position: absolute;
   right: 0;
   top: 150px;
+  margin-right: 20px;
 }
 
 
 .boxoffice_list {
-  display: flex;
-  margin-inline-start: 50px;
-  margin-inline-end: 50px;
-  flex-direction: row;
-  overflow: hidden;
-  opacity: 0;
+  display: grid;
+  margin-inline-start: 200px;
+  margin-inline-end: 200px;
+
+  grid-template-columns: repeat(5,200px);
+  grid-template-rows: (2,150px);
   
 }
-.poster{
-  width: 155px;
-  height: 300px;
-  border: 3px solid black;
-  display: flex;
-  --curentIndex :0;
-  --duration: 0;
-  transition: transform calc(var(--duration) * 1ms) ease-out;
-  transform: translate3D(calc(var(--currentIndex) * -100%), 0,0);
+.p0{
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
-
-.poster img{
+.p1{
+  grid-column: 2 / 3;
+  grid-row:  1 / 2;
+}
+.p2{
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+.p3{
+  grid-column: 4 / 5;
+  grid-row: 1 / 2l
+}
+.p4{
+  grid-column: 5 / 6;
+  grid-row: 1 / 2;
+}
+.boxoffice_list img{
   width: auto;
   height: auto;
   max-width: 150px;
   max-height: 300px;
-  flex:auto;
+  position: absolute;
+  
+  
 }
