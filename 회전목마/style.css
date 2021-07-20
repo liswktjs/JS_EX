@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.boxoffce_list {
+    position: relative;
+    margin: 0 auto;
+    overflow : hidden;
+    opacity: 0;
+}
+
+.poster {
+    --currentSlide: 0;
+    --duration : 0;
+    display: flex;
+    transition: transform calc(var(--duration) * 1ms) ease-out;
+    transform: translate3d(calc(var(--currentSlide) * -100%), 0, 0);
+}
+
+.poster img{
+    max-width: 150px;
+    height: auto;
+}
+
+.boxoffice button{
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    transform: translateY(-50%);
+}
+.boxoffice button:hover{
+    background-color: aquamarine;
+}
+
+.left_btn {
+    left: 0;
+}
+.right_btn{
+    right: 0;
+}
