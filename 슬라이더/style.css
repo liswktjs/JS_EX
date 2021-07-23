@@ -26,7 +26,7 @@
   margin-right: 20px;
 }
 
-
+/*grid방식으로 포스터 하나씩의 위치를 정해 놓는다 */
 .boxoffice_list {
   display: grid;
   margin-inline-start: 200px;
@@ -36,10 +36,12 @@
   grid-template-rows: (2,150px);
   
 }
+
 .p0{
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
+
 .p1{
   grid-column: 2 / 3;
   grid-row:  1 / 2;
