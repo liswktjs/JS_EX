@@ -1,0 +1,19 @@
+.progress-bar{
+    position: relative;
+    background-color: black;
+    width: 80%;
+    height: 30px;
+    padding : 8px;
+    border-radius: 5px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.progress-bar > span{
+    display: block;
+    background-color: blanchedalmond;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: width 1s;
+}
