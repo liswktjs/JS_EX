@@ -3,90 +3,83 @@ body {
     padding: 0;
 }
 
+
 .nav {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: row;
-    left: 0;
+    flex-wrap: wrap;
+    width: 100vw;
     top: 0;
-    right: 0;
-    border-bottom: 1px solid #000;
-    padding: 0;
+    left: 0;
     margin: 0;
+    padding: 0;
+    height: 50px;
     list-style: none;
-    background-color: #fff8;
-    color: #999;
     overflow: hidden;
+    border-style: none;
 }
 
-.nav li{
+#nav-item{
     position: relative;
-    flex : 1;
-    text-align: center;
+    flex-grow: 1;
 }
 
-.nav li::before{
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    border-left: solid 1px #000;
-}
-
-.nav li:first-child::before{
-    border: 0;
-}
-.nav button{
-    display: block;
-    line-height: 30px;
-    width: 100%;
-    border:0;
-    outline: 0;
+.nav-btn{
     background-color: transparent;
-    cursor: pointer;
-    transition: 0.3s;
+    color: #111;
+    width: 100%;
+    font-size: 15px;
+    border-top: 0;
+    border-left : 0;
+    border-bottom: 1px solid #111;
+    border-right: 1px solid #111;
 }
 
-.nav button:hover{
-    background-color: #fff;
-}
-.nav li.on button{
-    background-color: #888;
-    color : #fff;
-    font-weight: bold;
-    font-size: 1.2em;
+.on .nav-btn{
+    background-color: slategrey;
 }
 
-.contents > div{
-    height: 100vh;
-    line-height: 100vh;
+.nav > li:last-child .nav-btn{
+    border-right: none;
+}
+.container{
+    position:absolute;
+    top: 20px;
+}
+.content{
+    display: flex;
+    width:100vw;
     text-align: center;
-    font-size: 15em;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 30px;
 }
 
-.contents > div:nth-child(1){
-    background-color:pink;
+.container > div:nth-child(1){
+    background-color: pink;
 }
-.contents > div:nth-child(2){
+
+.container > div:nth-child(2){
     background-color: plum;
 }
-.contents > div:nth-child(3){
+
+.container > div:nth-child(3){
     background-color: powderblue;
 }
-.contents > div:nth-child(4){
+.container > div:nth-child(4){
     background-color: purple;
 }
-.contents > div:nth-child(5){
+.container > div:nth-child(5){
     background-color: rebeccapurple;
 }
-.contents > div:nth-child(6){
+.container > div:nth-child(6){
     background-color: salmon;
 }
-.contents > div:nth-child(7){
+.container > div:nth-child(7){
     background-color: sandybrown;
 }
-.contents > div:nth-child(8){
-    background-color:seashell;
+.container > div:nth-child(8){
+    background-color: skyblue;
 }
