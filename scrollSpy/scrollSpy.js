@@ -12,7 +12,7 @@ export default function scrollSpy(){
     this.init = () => {
         scrollEvent();
         navEvent();
-        //sourcetree test 
+        //sourcetree test2
     }
     const scrollEvent = () => {
         window.addEventListener('scroll', (e) => {
