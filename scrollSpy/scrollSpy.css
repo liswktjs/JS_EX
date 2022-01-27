@@ -3,9 +3,14 @@ body {
     padding: 0;
 }
 
-
+.app{
+    display: relative;
+    height: fit-content;
+}
 .nav {
-    position: absolute;
+    /* position: -webkit-sticky;
+    position: sticky; */
+    position: fixed;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -16,7 +21,7 @@ body {
     padding: 0;
     height: 50px;
     list-style: none;
-    overflow: hidden;
+    z-index: 100;
     border-style: none;
 }
 
@@ -26,7 +31,7 @@ body {
 }
 
 .nav-btn{
-    background-color: transparent;
+    background-color: #fff;
     color: #111;
     width: 100%;
     font-size: 15px;
@@ -38,6 +43,7 @@ body {
 
 .on .nav-btn{
     background-color: slategrey;
+    color: #fff;
 }
 
 .nav > li:last-child .nav-btn{
